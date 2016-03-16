@@ -13,8 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/posts', function(req, res, next) {
   Post.find(function(err, posts){
     if(err){ return next(err); }
-
- res.json(posts);
+    res.json(posts);
   });
 });
 
@@ -95,3 +94,4 @@ router.param('comment', function(req, res, next, id) {
 });
 
 module.exports = router;
+
